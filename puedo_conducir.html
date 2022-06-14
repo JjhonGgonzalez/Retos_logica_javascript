@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Puedes conducir?</title>
+</head>
+<body>
+    <h1>Sistema Aptitudinal para conducir</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    var nombre = prompt("¿Cual es tu nombre?");
+    var edad = parseInt(prompt(nombre+", ¿Cuál es tu edad?"));
+    var tieneLicencia = prompt(nombre+", ¿Tienes licencia? Responde S o N");
+
+    if (edad>=18 ){
+        if(tieneLicencia=="S"){
+        imprimir(nombre+", Puedes conducir");
+        }
+        else{
+            imprimir(nombre+", No puedes conducir");
+        }   
+    }
+    else{
+        imprimir(nombre+", No puedes conducir");
+    }
+    </script>
+    </body>
+    </html>

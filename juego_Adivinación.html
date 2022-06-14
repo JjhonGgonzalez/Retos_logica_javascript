@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Adivinación</title>
+</head>
+<body>
+    <h1>Juego adivina el número que piensa el sistema</h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br><br><br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var numeroSistema = Math.round(Math.random()*10);
+        var intentos =3;
+        var contador=1;
+
+        while(contador<=intentos){
+        
+            var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+
+            if(numeroSistema ==numeroLanzado){
+                alert("Felicitaciones usted ha acertado en el intento "+intentos+", El número pensado era: "+numeroSistema);
+                break;
+            }
+
+            else{
+                alert("Usted erró");
+            }
+            contador++;
+    }
+    if(numeroSistema ==numeroLanzado){
+                imprimir("Felicitaciones usted ha acertado en el intento "+contador+", El número pensado era: "+numeroSistema);
+            }
+
+            else{
+                imprimir("Usted erró, el número pensado era: "+ numeroSistema);
+            }
+    imprimir("fin");
+        </script>
+</body>
+</html>
